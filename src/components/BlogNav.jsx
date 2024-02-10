@@ -16,6 +16,7 @@ const BlogNav = () => {
         
         <Link class="nav-link" to="/add">Add Blog</Link>
         <Link class="nav-link" to="/view">View Blogs</Link>
+        <Link class="nav-link" to="/myblog">View My Blogs</Link>
         <Link class="nav-link" to="/">Log Out</Link>
         
       </div>
