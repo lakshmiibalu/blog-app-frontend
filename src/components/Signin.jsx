@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 
 import axios from 'axios'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const Signin = () => {
-
+const navigate = useNavigate()
     const [input,setInput] = useState(
         {
             
@@ -25,7 +25,7 @@ const Signin = () => {
 
                 if (response.data.status == "success") {
 
-                    alert("Signup successfull")
+                    navigate("/add")
                     setInput({
                         
                         "email":"",
@@ -72,7 +72,7 @@ const Signin = () => {
                         </div>
                         <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 
-                            <button className="btn btn-info" onClick={readValues}>Signin</button>
+                            <button className="btn btn-info" onClick={readValues}>Sign in</button>
 
                         </div>
                         <Link class="nav-link" to="/signup">New user register</Link>
