@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
-import BlogNav from './BlogNav'
+
 import axios from 'axios'
+import { Link } from 'react-router-dom'
 
 const Signin = () => {
 
@@ -49,7 +50,8 @@ const Signin = () => {
   return (
     <div>
 
-        <BlogNav/>
+        <br />
+        <br />
 
         <div className="container">
             <div className="row">
@@ -73,6 +75,8 @@ const Signin = () => {
                             <button className="btn btn-info" onClick={readValues}>Signin</button>
 
                         </div>
+                        <Link class="nav-link" to="/signup">New user register</Link>
+        
                     </div>
                 </div>
             </div>
