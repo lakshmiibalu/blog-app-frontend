@@ -25,7 +25,8 @@ const navigate = useNavigate()
 
                 if (response.data.status == "success") {
 
-                    navigate("/add")
+                    console.log(response.data.userData._id)
+                    //navigate("/add")
                     setInput({
                         
                         "email":"",

@@ -6,9 +6,9 @@ const AddBlog = () => {
 
     const [input,setInput] = useState(
         {
-            
+            "userId":"",
             "post":""
-     }
+        }
     )
     const inputHandler = (event)=>{
         setInput(
@@ -26,7 +26,9 @@ const AddBlog = () => {
                     alert("Blog added successfully")
                     setInput({
                         
+                        "userId":"",
                         "post":""
+                        
                         })
                     
                 } else {
