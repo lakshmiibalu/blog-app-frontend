@@ -33,7 +33,9 @@ const ViewBlog = () => {
                                     <div class="card-header bg-transparent border-success"></div>
                                     <div class="card-body text-success">
                                         
-                                        <p class="card-text">User Id : {value.userId}</p>
+                                        <p class="card-text">Name : {value.userId.name}</p>
+                                        <p class="card-text"> Age : {value.userId.age}</p>
+                                        <p class="card-text">Address : {value.userId.address}</p>
                                         <p class="card-text">Post : {value.post}</p>
                                         
                                     </div>

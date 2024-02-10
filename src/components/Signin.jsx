@@ -26,12 +26,9 @@ const navigate = useNavigate()
                 if (response.data.status == "success") {
 
                     console.log(response.data.userData._id)
-                    //navigate("/add")
-                    setInput({
-                        
-                        "email":"",
-                        "password":""
-                 })
+                    sessionStorage.setItem("userId",response.data.userData._id)
+                    navigate("/add")
+                    
                     
                 } else{
                 if (response.data.status == "invalid user") {

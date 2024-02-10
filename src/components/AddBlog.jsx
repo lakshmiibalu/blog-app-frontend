@@ -6,7 +6,7 @@ const AddBlog = () => {
 
     const [input,setInput] = useState(
         {
-            "userId":"",
+            "userId":sessionStorage.getItem("userId"),
             "post":""
         }
     )
