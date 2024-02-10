@@ -6,7 +6,7 @@ const AddBlog = () => {
 
     const [input,setInput] = useState(
         {
-            "userId":"",
+            
             "post":""
      }
     )
@@ -25,7 +25,7 @@ const AddBlog = () => {
 
                     alert("Blog added successfully")
                     setInput({
-                        "userId":"",
+                        
                         "post":""
                         })
                     
@@ -47,12 +47,7 @@ const AddBlog = () => {
                 <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 
                     <div className="row g-3">
-                        <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
-
-                            <label htmlFor="" className="form-label">User Id</label>
-                            <input type="text" className="form-control" name="userId" value={input.userId} onChange={inputHandler}/>
-
-                        </div>
+                        
                         <div className="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
 
                             <label htmlFor="" className="form-label">Post</label>
@@ -63,7 +58,7 @@ const AddBlog = () => {
                         
                         <div className="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
 
-                            <button className="btn btn-info" onClick={readValues}>Add</button>
+                            <button className="btn btn-info" onClick={readValues}>Submit</button>
 
                         </div>
                     </div>
