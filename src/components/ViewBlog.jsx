@@ -6,7 +6,7 @@ const ViewBlog = () => {
 
     const [data,setData] = useState([])
     const getData = ()=>{
-        axios.get("http://localhost:3003/api/post/view").then(
+        axios.get("http://localhost:3001/api/post/view").then(
             (response)=>{
                 setData(response.data)
             }

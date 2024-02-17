@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import BlogNav from './BlogNav'
 import axios from 'axios'
 import { Link } from 'react-router-dom'
 
@@ -23,7 +22,7 @@ const Signup = () => {
     }
     const readValues = ()=>{
         console.log(input)
-        axios.post("http://localhost:3003/api/blog/signup",input).then(
+        axios.post("http://localhost:3001/api/blog/signup",input).then(
             (response)=>{
                 console.log(response.data)
 
