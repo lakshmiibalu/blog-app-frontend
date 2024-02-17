@@ -19,7 +19,7 @@ const navigate = useNavigate()
     }
     const readValues = ()=>{
         console.log(input)
-        axios.post("http://localhost:3003/api/blog/signin",input).then(
+        axios.post("http://localhost:3001/api/blog/signin",input).then(
             (response)=>{
                 console.log(response.data)
 

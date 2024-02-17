@@ -11,15 +11,30 @@ const ViewMyblog = () => {
         }
     )
 
-    const readValues = ()=>{
+    const getData = ()=>{
         console.log(input)
-        axios.post("http://localhost:3003/api/post/mypost",input).then(
+        axios.post("http://localhost:3001/api/post/mypost",input).then(
             (response)=>{
                 setData(response.data)
             }
         )
     }
-    useEffect(()=>{readValues()},[])
+    useEffect(()=>{getData()},[])
+
+    const deletePost = (id)=>{
+        //alert(id)
+        let data = {"_id":id}
+        axios.post("http://localhost:3001/api/post/delete",data).then(
+            (response)=>{
+                if (response.data.status == "success") {
+
+                    alert("Blog Deleted")
+                    getData()
+                    
+                }
+            }
+        )
+    }
 
   return (
     <div>
@@ -45,6 +60,7 @@ const ViewMyblog = () => {
                                         
                                         <p class="card-text">Post : {value.post}</p>
                                         <p class="card-text">Date : {value.postedDate}</p>
+                                        <button className="btn btn-danger" onClick={()=>{deletePost(value._id)}}>Delete</button>
                                     </div>
                                     <div class="card-footer bg-transparent border-success"></div>
                                     </div>
