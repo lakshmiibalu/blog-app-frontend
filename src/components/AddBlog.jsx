@@ -17,7 +17,7 @@ const AddBlog = () => {
     }
     const readValues = ()=>{
         console.log(input)
-        axios.post("http://localhost:3003/api/post/add ",input).then(
+        axios.post("http://localhost:3001/api/post/add ",input).then(
             (response)=>{
                 console.log(response.data)
 

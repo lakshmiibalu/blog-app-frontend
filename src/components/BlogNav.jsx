@@ -1,7 +1,21 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useEffect } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
 const BlogNav = () => {
+  let navigate = useNavigate()
+  useEffect(()=>{
+    let userId = sessionStorage.getItem("userId")
+    if (userId === null || userId == undefined) {
+
+      navigate("/")
+      
+    }
+  })
+
+  const logOutAction = ()=>{
+    sessionStorage.clear()
+    navigate("/")
+  }
   return (
     <div>
 
@@ -17,7 +31,7 @@ const BlogNav = () => {
         <Link class="nav-link" to="/add">Add Blog</Link>
         <Link class="nav-link" to="/view">View Blogs</Link>
         <Link class="nav-link" to="/myblog">View My Blogs</Link>
-        <Link class="nav-link" to="/">Log Out</Link>
+        <span class="nav-link" onClick={logOutAction}>Log Out</span>
         
       </div>
     </div>
